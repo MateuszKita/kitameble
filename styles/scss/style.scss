@@ -1,7 +1,239 @@
-@import "@_variables.scss";
-@import "@_mixins.scss";
-@import "@_functions.scss";
-@import "@_extensions.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_functions.scss";
+@import "_extensions.scss";
 
-// @include => mixiny
-// @extend => extensions
+* {
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    padding: 2px;
+    margin-top: 0;
+    color: $white;
+    background-color: $black;
+    padding: 0 15%;
+    #info {
+        text-align: left;
+    }
+    #media {
+        float: right;
+    }
+    a {
+        white-space: nowrap;
+    }
+}
+
+body {
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-image: $url_0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main-parts {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: $white;
+    color: $black;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    min-height: 50px;
+    text-transform: uppercase;
+    a {
+        color: $black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+        &:hover {
+            color: $menu-active-color;
+            font-weight: bold;
+        }
+    }
+    li {
+        display: inline;
+        padding: 0 20px;
+    }
+    #branding {
+        float: left;
+        font-size: 70%;
+        h1 #logo {
+            width: 15%;
+            vertical-align: middle;
+        }
+    }
+    nav {
+        float: right;
+        margin-top: 10px;
+    }
+    #top-menu {
+        color: $text-header-color;
+        font-weight: bold;
+    }
+    .current a {
+        color: $text-header-color;
+        font-weight: bold;
+        text-decoration: overline $text-header-color;
+    }
+}
+
+#showcase {
+    min-height: 400px;
+    text-align: left;
+    color: $white;
+    h1 {
+        margin-top: 100px;
+        font-size: 55px;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 20px;
+    }
+    #read-more {
+        fill: $text-header-color;
+        stroke-width: 5;
+        opacity: 0.6;
+    }
+}
+
+#balls {
+    width: 70%;
+    height: 100px;
+    right: -15%;
+    position: relative;
+    img {
+        width: 18%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+#boxes {
+    padding-top: 50px;
+    background-color: $white;
+    h3 {
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+    a {
+        text-decoration: underline;
+    }
+    .box {
+        float: left;
+        text-align: center;
+        width: 32%;
+        padding: 10px;
+        img {
+            width: 90px;
+        }
+    }
+}
+
+#box1 {
+    animation: move-right 1s linear;
+    fill: $box1-color;
+}
+
+#box2 {
+    animation: move-right 1s linear;
+    fill: $box2-color;
+}
+
+#box3 {
+    animation: move-left 1s linear;
+    fill: $box3-color;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    &:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 3%;
+}
+
+@media(max-width: 768px) {
+    header {
+        padding-bottom: 20px;
+        #branding {
+            float: none;
+            text-align: center;
+            width: 100%;
+        }
+        nav {
+            float: none;
+            text-align: center;
+            width: 100%;
+            li {
+                float: none;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+    #boxes .box {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    #showcase h1 {
+        margin-top: 40px;
+    }
+}
+
+@keyframes move-left {
+    0% {
+        transform: translateX(350%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes move-right {
+    0% {
+        transform: translateX(-350%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+#menu a:active {
+    background-color: $white;
+    text-decoration: overline $text-header-color;
+    color: $text-header-color;
+}
+
+canvas#copy {
+    width: 18%;
+    position: absolute;
+    right: 10%;
+    bottom: -3%;
+    z-index: -1;
+    transform: scale(-1, 1);
+}
+
+svg text {
+    font-family: $font_0;
+}
