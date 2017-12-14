@@ -15,6 +15,9 @@ footer {
     padding: 0 15%;
     #info {
         text-align: left;
+        a {
+            white-space: nowrap;
+        }
     }
     #media {
         float: right;
@@ -115,25 +118,12 @@ header {
     }
     p {
         font-size: 20px;
-        text-shadow: 2px 2px $black;        
+        text-shadow: 2px 2px $black;
     }
     #read-more {
         fill: $text-header-color;
         stroke-width: 5;
         opacity: 0.6;
-    }
-}
-
-#balls {
-    width: 70%;
-    height: 100px;
-    right: -15%;
-    position: relative;
-    img {
-        width: 18%;
-        position: absolute;
-        right: 0;
-        bottom: 0;
     }
 }
 
@@ -188,29 +178,33 @@ a {
     margin-left: 3%;
 }
 
-@media(max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .main-parts {
+        width: 98%;
+        margin: 2%;
+    }
     header {
         padding-bottom: 20px;
         #branding {
             float: none;
             text-align: center;
-            width: 100%;
+            width: 97%;
         }
         nav {
             float: none;
             text-align: center;
-            width: 100%;
+            width: 97%;
             li {
                 float: none;
                 text-align: center;
-                width: 100%;
+                width: 97%;
             }
         }
     }
     #boxes .box {
         float: none;
         text-align: center;
-        width: 100%;
+        width: 97%;
     }
     #showcase h1 {
         margin-top: 40px;
