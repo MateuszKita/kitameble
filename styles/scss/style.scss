@@ -164,17 +164,17 @@ header {
 }
 
 #box1 {
-    animation: move-right 1s linear;
+    animation: move-right 1s linear 3s;
     fill: $box1-color;
 }
 
 #box2 {
-    animation: move-right 1s linear;
+    animation: move-down 1s linear 3s;
     fill: $box2-color;
 }
 
 #box3 {
-    animation: move-left 1s linear;
+    animation: move-left 1s linear 3s;
     fill: $box3-color;
 }
 
@@ -229,7 +229,12 @@ a {
 
 @keyframes move-left {
     0% {
-        transform: translateX(350%);
+        transform: translateX(0);
+        opacity: 0.85;
+    }
+    50% {
+        transform: translateX(-1.5%);
+        opacity: 0.85;
     }
     100% {
         transform: translateX(0%);
@@ -238,10 +243,29 @@ a {
 
 @keyframes move-right {
     0% {
-        transform: translateX(-350%);
+        transform: translateX(0);
+        opacity: 0.85;
+    }
+    50% {
+        transform: translateX(1.5%);
+        opacity: 0.85;
     }
     100% {
         transform: translateX(0%);
+    }
+}
+
+@keyframes move-down {
+    0% {
+        transform: translateY(0);
+        opacity: 0.85;
+    }
+    50% {
+        transform: translateY(1.5%);
+        opacity: 0.85;
+    }
+    100% {
+        transform: translateY(0%);
     }
 }
 
