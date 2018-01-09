@@ -19,7 +19,7 @@
         animation: spin 2s linear infinite;
     }
     p {
-        padding-top: 15px; 
+        padding-top: 15px;
         text-align: center;
         font-size: 20px;
         font-style: italic;
@@ -264,6 +264,11 @@ svg text {
         width: 20px;
         height: 20px;
     }
+    #box1,
+    #box2,
+    #box3 {
+        animation: shake-media 2s linear 3s;
+    }
 }
 
 @keyframes shake-left {
@@ -305,6 +310,28 @@ svg text {
     }
     100% {
         transform: translateY(0%);
+    }
+}
+
+@keyframes shake-media {
+    0% {
+        transform: translateX(0);
+        opacity: 0.85;
+    }
+    25% {
+        transform: translateX(2%);
+        opacity: 0.85;
+    }
+    50% {
+        transform: translateX(2%) translateY(2%);
+        opacity: 0.85;
+    }
+    75% {
+        transform: translateX(0) translateY(2%);
+        opacity: 0.85;
+    }
+    100% {
+        transform: translateX(0) translateY(0);
     }
 }
 
