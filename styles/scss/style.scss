@@ -180,17 +180,17 @@ header {
 }
 
 #box1 {
-    animation: shake-right 1s linear 3s;
+    animation: shake-right 2s linear 3s;
     fill: $box1-color;
 }
 
 #box2 {
-    animation: shake-down 1s linear 3s;
+    animation: shake-down 2s linear 3s;
     fill: $box2-color;
 }
 
 #box3 {
-    animation: shake-left 1s linear 3s;
+    animation: shake-left 2s linear 3s;
     fill: $box3-color;
 }
 
@@ -277,7 +277,7 @@ svg text {
         opacity: 0.85;
     }
     50% {
-        transform: translateX(-1.5%);
+        transform: translateX(-2%);
         opacity: 0.85;
     }
     100% {
@@ -291,7 +291,7 @@ svg text {
         opacity: 0.85;
     }
     50% {
-        transform: translateX(1.5%);
+        transform: translateX(2%);
         opacity: 0.85;
     }
     100% {
@@ -305,7 +305,7 @@ svg text {
         opacity: 0.85;
     }
     50% {
-        transform: translateY(1.5%);
+        transform: translateY(2%);
         opacity: 0.85;
     }
     100% {
