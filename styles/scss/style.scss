@@ -141,10 +141,11 @@ header {
         font-size: 53px;
         text-shadow: 4px 4px $black;
         background-color: rgba(0, 0, 0, 0.7);
-        display: inline;
+        display: inline-flex;
         white-space: nowrap;
         border-radius: 50px;
         padding: 0px 15px 4px 15px;
+        animation: move-from-left 2s linear 1s;
     }
     p {
         font-size: 20px;
@@ -154,6 +155,7 @@ header {
         border-radius: 50px;
         display: table;
         padding: 0px 10px 0px 10px;
+        animation: move-from-left 2s linear 1s;
     }
 }
 
@@ -173,9 +175,6 @@ header {
         text-align: center;
         width: 30%;
         padding: 10px;
-        img {
-            width: 90px;
-        }
     }
 }
 
@@ -245,6 +244,9 @@ svg text {
             }
         }
     }
+    #boxes {
+        padding-right: 18px;
+    }
     #boxes .box {
         float: none;
         text-align: center;
@@ -271,6 +273,16 @@ svg text {
     }
 }
 
+@keyframes move-from-left {
+    0% {
+        transform: translateX(-150%);
+        opacity: 0.85;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 @keyframes shake-left {
     0% {
         transform: translateX(0);
@@ -281,7 +293,7 @@ svg text {
         opacity: 0.85;
     }
     100% {
-        transform: translateX(0%);
+        transform: translateX(0);
     }
 }
 
@@ -295,7 +307,7 @@ svg text {
         opacity: 0.85;
     }
     100% {
-        transform: translateX(0%);
+        transform: translateX(0);
     }
 }
 
@@ -309,7 +321,7 @@ svg text {
         opacity: 0.85;
     }
     100% {
-        transform: translateY(0%);
+        transform: translateY(0);
     }
 }
 
