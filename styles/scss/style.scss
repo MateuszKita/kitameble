@@ -106,20 +106,17 @@ header {
         padding: 0 20px;
     }
     #branding {
-        float: left;
-        font-size: 70%;
+        padding: 10px 10px;
+        display: inline-block;
         h1 #logo {
-            width: 35%;
-            vertical-align: middle;
+            border: solid black 2px;
+            width: 15%;
+            float: left;
         }
-    }
-    nav {
-        float: right;
-        margin-top: 10px;
-    }
-    #top-menu {
-        color: $text-header-color;
-        font-weight: bold;
+        #navigation {
+            border: solid black 2px;
+            float: right;
+        }
     }
     .current a {
         color: $text-header-color;
